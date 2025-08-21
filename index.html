@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio - [Your Name]</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #222;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 40px 0 30px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            color: #b0b0b0;
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #222;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #0077cc;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 40px 30px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #0077cc;
+            margin-bottom: 18px;
+            font-size: 2rem;
+        }
+        .about {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background: #e3eaf1;
+            color: #0077cc;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+        .project-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 22px 18px;
+            transition: transform 0.18s, box-shadow 0.18s;
+            border-left: 4px solid #0077cc;
+        }
+        .project-item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,119,204,0.10);
+        }
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        .project-desc {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .project-links a {
+            color: #0077cc;
+            text-decoration: none;
+            margin-right: 12px;
+            font-size: 0.98rem;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            font-size: 1.1rem;
+        }
+        .contact-info a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 6px;
+            }
+            header {
+                padding: 28px 0 18px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>[Your Name]</h1>
+        <p>Full Stack Developer | Software Engineer | Problem Solver</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about">
+                Hello! I'm <strong>[Your Name]</strong>, a passionate and results-driven software developer with experience in building scalable web applications and delivering high-quality solutions. I enjoy tackling complex problems, learning new technologies, and collaborating with cross-functional teams to create impactful products.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>HTML5 &amp; CSS3</li>
+                <li>SQL &amp; NoSQL</li>
+                <li>REST APIs</li>
+                <li>Git &amp; GitHub</li>
+                <li>Docker</li>
+                <li>CI/CD</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-title">Portfolio Website</div>
+                    <div class="project-desc">
+                        A modern, responsive personal portfolio website to showcase my projects, skills, and experience. Built with HTML, CSS, and JavaScript.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Task Manager App</div>
+                    <div class="project-desc">
+                        A full-stack task management application with user authentication, real-time updates, and RESTful API. Built using React, Node.js, and MongoDB.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">E-commerce Platform</div>
+                    <div class="project-desc">
+                        An e-commerce platform featuring product listings, shopping cart, and secure checkout. Developed with Django and integrated Stripe payments.
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- Add more project items as needed -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
