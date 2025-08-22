@@ -128,6 +128,44 @@ footer {
     color: rgba(0, 0, 0, 0.8);
     font-size: 16px;
 }
+.highlight-word{
+    color: #3b82f6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.highlight-word:hover
+{
+    color: #1d4ed8;
+}
+.button-html,
+.button-css,
+.button-js,
+.button-python,
+.button-java {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #1a1818;
+    display: inline;
+}
+
+.button-html:hover,
+.button-css:hover,
+.button-js:hover,
+.button-python:hover,
+.button-java:hover {
+    color: #000000;
+
+}
 
 @media (max-width: 768px) {
     .container {
