@@ -6,7 +6,7 @@ function toggleActivities() {
     // HTML button
     const buttonBack=document.querySelector('.buttonBack');
     if (buttonBack) {
-        if (window.location.href='music.html'||'comics.html'||'sports.html'||'lola.html'||'tv.html'||'video-games.html') {
+        if (window.location.href.includes('music.html') || window.location.href.includes('comics.html') || window.location.href.includes('sports.html') || window.location.href.includes('lola.html') || window.location.href.includes('tv.html') || window.location.href.includes('video-games.html')) {
         buttonBack.addEventListener('click', function() {
             window.location.href = 'index.html';
         });

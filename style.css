@@ -257,31 +257,21 @@ footer {
 }
 
 
-/* Interest Links Styling - COMPLETELY HIDDEN */
+/* Interest Links Styling */
 .video-games, .writing, .music, .sports, .tv, .comics, .lola,
 .projects,
  .player {
-    display: none !important; /* Force hide the text links completely */
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    left: -9999px !important;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-/* Remove hover effects for hidden elements */
 .video-games:hover, .writing:hover, .music:hover, .sports:hover, .tv:hover, .comics:hover, .lola:hover,
 .projects:hover,
 .player:hover{
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
+    color: #1d4ed8;
+    text-decoration: underline;
 }
 
 /* Back Button Styling */
@@ -339,7 +329,7 @@ footer {
     display: block;
 }
 
-/* Sports player profile images */
+/* Sports player profile images */.TJWattPic,
 .BijanRobinsonPic,.JoshAllenPic,.BrianThomasJrPic,.DrakeMayePic,.GeorgePickensPic,.JahmyrGibbsPic,.JaydenDanielsPic,.JoeBurrowPic,.MalikNabersPic{
     width: 300px;
     height: auto;
@@ -444,4 +434,267 @@ footer {
     outline: none;
     /* Ensure smooth scaling */
     transform-origin: center;
+}
+
+/* Projects page styling */
+.projects-content {
+    margin-top: 20px;
+}
+
+.project-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-item h3 {
+    color: #3b82f6;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-item p {
+    color: #e5e7eb;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    border-color: rgba(59, 130, 246, 0.8);
+}
+
+.project-link:active {
+    transform: translateY(0);
+}
+
+/* Sacked QBs Section Styling */
+.sacked-qbs {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.sacked-qbs-title {
+    padding: 5px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.qb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.qb-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.qb-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.qb-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(59, 130, 246, 0.3);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.qb-item:hover .qb-pic {
+    border-color: rgba(59, 130, 246, 0.8);
+    transform: scale(1.05);
+}
+
+.qb-item h3 {
+    color: #3b82f6;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.qb-item p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for QB grid */
+@media (max-width: 768px) {
+    .qb-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .qb-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .qb-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .qb-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure text visibility without breaking layout */
+.about-content, .about-title, .languages-title, .languages-content {
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Ensure links are visible and properly styled */
+.video-games, .writing, .music, .sports, .tv, .comics, .lola, .projects {
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #3b82f6 !important;
+    text-decoration: none !important;
+    display: inline !important;
+}
+
+/* Fix project link colors for better visibility */
+.project-item p {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Ensure all text elements are properly visible */
+p, h1, h2, h3, h4, h5, h6, span, div {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix any potential display issues with main containers */
+.container, .container2, .container3 {
+    display: flex !important;
+}
+
+/* Ensure the pfp maintains its circular shape and positioning */
+.pfp {
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+/* Fix any potential issues with the header layout */
+.header {
+    display: block !important;
+}
+
+/* Ensure the main content area is properly sized */
+main {
+    display: block !important;
+}
+
+/* Fix any potential issues with the about section */
+.about, .languages {
+    display: flex !important;
+}
+
+/* Ensure language items are properly displayed */
+.language-item {
+    display: flex !important;
+}
+
+/* Fix any potential issues with the footer */
+footer {
+    display: block !important;
+}
+
+/* Additional fixes for better layout */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure proper spacing and alignment */
+.container {
+    gap: 30px !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Fix any potential issues with the pfp image */
+.pfp-img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ensure proper text rendering */
+body {
+    font-family: "Lucida Console", serif !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    background: #ffffff !important;
+}
+
+/* Fix any potential issues with the main content */
+main {
+    width: 1200px !important;
+    height: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    overflow: auto !important;
+}
+
+/* Ensure proper button functionality */
+.button-html, .button-css, .button-js, .button-python, .button-java {
+    cursor: pointer !important;
+    display: inline-block !important;
+}
+
+/* Fix any potential issues with the language icons */
+.language-icon {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
 }
