@@ -1,5 +1,7 @@
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Toggle activities list visibility
+function toggleActivities() {
+    const activitiesList = document.getElementById('activitiesList');
+    const expandButton = document.querySelector('.expand');
     
     // HTML button
     const buttonHtml = document.querySelector('.button-html');
