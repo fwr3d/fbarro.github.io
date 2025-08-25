@@ -4,13 +4,16 @@ function toggleActivities() {
     const expandButton = document.querySelector('.expand');
     
     // HTML button
-    const buttonHtml = document.querySelector('.button-html');
-    if (buttonHtml) {
-        buttonHtml.addEventListener('click', function() {
-            window.location.href = 'html-page.html';
+    const buttonBack=document.querySelector('.buttonBack');
+    if (buttonBack) {
+        if (window.location.href='music.html'||'comics.html'||'sports.html'||'lola.html'||'tv.html'||'video-games.html') {
+        buttonBack.addEventListener('click', function() {
+            window.location.href = 'index.html';
         });
+    
     }
 
+}
     // CSS button
     const buttonCss = document.querySelector('.button-css');
     if (buttonCss) {
@@ -26,32 +29,4 @@ function toggleActivities() {
             window.location.href = 'javascript-page.html';
         });
     }
-
-    // Python button
-    const buttonPython = document.querySelector('.button-python');
-    if (buttonPython) {
-        buttonPython.addEventListener('click', function() {
-            window.location.href = 'python-page.html';
-        });
-    }
-
-    // Java button
-    const buttonJava = document.querySelector('.button-java');
-    if (buttonJava) {
-        buttonJava.addEventListener('click', function() {
-            window.location.href = 'java-page.html';
-        });
-    }
-
-    // Add some visual feedback when buttons are clicked
-    const allButtons = document.querySelectorAll('.button-html, .button-css, .button-js, .button-python, .button-java');
-    allButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Add a brief visual effect
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-        });
-    });
-});
+}

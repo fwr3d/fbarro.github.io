@@ -11,8 +11,8 @@ body {
     background: #ffffff;
     min-height: 100vh;
 
-}
 
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -20,22 +20,6 @@ body {
     justify-content: center;
     padding: 40px 20px;
     gap: 30px;
-}
-
-.pfp {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 4px solid rgba(255, 255, 255, 0.2);
-}
-
-.pfp-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
 }
 
 .header {
@@ -88,7 +72,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 800px;
+    max-width:800px;
     margin: 30px auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -111,8 +95,7 @@ main {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.about-content,
-.languages-content {
+.about-content {
     display: block;
     font-size: 18px;
     margin-top: 5px;
@@ -121,7 +104,109 @@ main {
     line-height: 1.8;
     color: rgba(0, 0, 0, 0.9);
 }
+.MusicCollumn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.MusicRow{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
 
+}
+.languages-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.MusicItem{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width:fit-content;
+}
+.MusicItem:hover{
+    background-color: rgba(75, 77, 80, 0.1);
+    transform: translateY(-1px);
+}
+
+.MusicImg{
+    width:100px;
+    height:100px;
+    border-radius: 50%; /* Changed from 20% to 50% to make it circular instead of oval */
+}
+
+.MusicTxt {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.fb-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.sportsContent {
+    width: 100%;
+}
+
+.player {
+    text-decoration: none;
+    color: inherit;
+}
+
+.player:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+.expand{
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.language-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+.summrs{
+    color: rgb(0, 0, 0);
+    font-weight: bold    ;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
 footer {
     text-align: center;
     padding: 30px;
@@ -135,38 +220,188 @@ footer {
     transition: color 0.3s ease;
 }
 
-.highlight-word:hover
-{
+.highlight-word:hover {
     color: #1d4ed8;
 }
-.button-html,
-.button-css,
-.button-js,
-.button-python,
-.button-java {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
+
+.expand {
+    color: #3b82f6;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s ease;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.expand:hover {
+    color: #1d4ed8;
+    transform: scale(1.2);
+}
+
+.activities-list {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #3b82f6;
+}
+.joe-burrow a{
+    color:black
+}
+.activities-list p {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    padding: 10px;
+}
+
+
+/* Interest Links Styling - COMPLETELY HIDDEN */
+.video-games, .writing, .music, .sports, .tv, .comics, .lola,
+.projects,
+ .player {
+    display: none !important; /* Force hide the text links completely */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* Remove hover effects for hidden elements */
+.video-games:hover, .writing:hover, .music:hover, .sports:hover, .tv:hover, .comics:hover, .lola:hover,
+.projects:hover,
+.player:hover{
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Back Button Styling */
+.back-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-button, .backComics-button, .backMusic-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #3b82f6;
+    color: white;
     text-decoration: none;
-    color: #1a1818;
-    display: inline;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.button-html:hover,
-.button-css:hover,
-.button-js:hover,
-.button-python:hover,
-.button-java:hover {
-    color: #000000;
-
+.back-button:hover, .backComics-button:hover, .backMusic-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
+.back-button .arrow, .backComics-button .arrow, .backMusic-button .arrow {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-button .back-text, .backComics-button .back-text, .backMusic-button .back-text {
+    font-size: 16px;
+}
+
+/* Main category image containers - all set to consistent 200x200px */
+.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* Image content within the circular containers - consistent styling */
+.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Sports player profile images */
+.BijanRobinsonPic,.JoshAllenPic,.BrianThomasJrPic,.DrakeMayePic,.GeorgePickensPic,.JahmyrGibbsPic,.JaydenDanielsPic,.JoeBurrowPic,.MalikNabersPic{
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+    border: 8px solid black;
+    box-shadow: 0 10px 20px black;
+    border-radius: 15px;
+}
+
+/* Enhanced GIF image styling */
+.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.comics:hover, .sports:hover, .music:hover, .tv:hover, .video-games:hover, .writing:hover, .pfp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(59, 130, 246, 0.6);
+}
+
+/* Ensure GIF images maintain aspect ratio and fill containers properly */
+.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
+    transition: transform 0.3s ease;
+}
+
+.comics:hover .comics-img, .sports:hover .sports-img, .music:hover .music-img, 
+.tv:hover .tv-img, .video-games:hover .video-games-img, .writing:hover .writing-img, 
+.pfp:hover .pfp-img {
+    transform: scale(1.1);
+}
+
+/* Additional GIF image optimizations */
+.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Smooth image transitions */
+.comics img, .sports img, .music img, .tv img, .video-games img, .writing img, .pfp img {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Enhanced border effects for better visual appeal */
+.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+.comics:hover, .sports:hover, .music:hover, .tv:hover, .video-games:hover, .writing:hover, .pfp:hover {
+    border: 4px solid rgba(59, 130, 246, 0.8);
+    background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+}
+
+/* Ensure GIF images load smoothly */
+.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Responsive adjustments for different screen sizes */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -181,4 +416,32 @@ footer {
     .header h1 {
         font-size: 2rem;
     }
+
+    .comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Final GIF image consistency improvements */
+.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
+    /* Ensure consistent sizing and positioning */
+    flex-shrink: 0;
+    /* Prevent image distortion */
+    aspect-ratio: 1;
+}
+
+/* Ensure all GIF images have the same base styling */
+.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
+    /* Prevent any unwanted borders or outlines */
+    outline: none;
+    /* Ensure smooth scaling */
+    transform-origin: center;
 }
