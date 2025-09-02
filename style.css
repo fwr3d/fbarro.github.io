@@ -1,7 +1,16 @@
+/* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -9,19 +18,39 @@ body {
     line-height: 1.6;
     color: #333;
     background: #ffffff;
-    min-height: 100vh;
-
-
 }
+
+/* ===== LAYOUT CONTAINERS ===== */
 .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100vw;
     padding: 40px 20px;
     gap: 30px;
+    margin: 0;
 }
 
+.container2, .container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 20px;
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+    overflow: auto;
+    margin: 0;
+}
+
+/* ===== HEADER SECTION ===== */
 .header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -45,35 +74,12 @@ body {
     line-height: 1.6;
 }
 
-main {
-    width: 1200px;
-    height: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    overflow: auto;
-}
-
-.container2 {
+/* ===== CONTENT SECTIONS ===== */
+.about, .languages {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.container3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.about,
-.languages {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width:800px;
-    margin: 30px auto;
+    width: calc(100vw - 40px);
+    margin: 30px 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -82,8 +88,7 @@ main {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.about-title,
-.languages-title {
+.about-title, .languages-title {
     padding: 5px 20px;
     font-size: 24px;
     font-weight: bold;
@@ -104,116 +109,33 @@ main {
     line-height: 1.8;
     color: rgba(0, 0, 0, 0.9);
 }
-.MusicCollumn{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 5px;
-    padding: 10px;
-    width: 100%;
-}
-.MusicRow{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    margin-top: 5px;
-    padding: 10px;
-    width: 100%;
 
-}
-.languages-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 5px;
-    padding: 10px;
-    width: 100%;
-}
-.MusicItem{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 10px;
-    border-radius: 20px;
-    text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    width:fit-content;
-}
-.MusicItem:hover{
-    background-color: rgba(75, 77, 80, 0.1);
-    transform: translateY(-1px);
-}
-
-.MusicImg{
-    width:100px;
-    height:100px;
-    border-radius: 50%; /* Changed from 20% to 50% to make it circular instead of oval */
-}
-
-.MusicTxt {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-right: 10px;
-}
-
-.fb-container {
-    width: 100%;
-    max-width: 1000px;
-}
-
-.sportsContent {
-    width: 100%;
-}
-
-.player {
+/* ===== INTEREST LINKS ===== */
+.video-games, .writing, .music, .sports, .tv, .comics, .lola, .projects, .player {
+    color: #3b82f6;
     text-decoration: none;
-    color: inherit;
-}
-
-.player:hover {
-    text-decoration: none;
-    color: inherit;
-}
-.language-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 0;
-}
-.expand{
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+    font-weight: 600;
     transition: color 0.3s ease;
-}
-.language-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    display: inline;
+    width: auto;
+    height: auto;
+    min-width: auto;
+    min-height: auto;
 }
 
+.video-games:hover, .writing:hover, .music:hover, .sports:hover, .tv:hover, .comics:hover, .lola:hover, .projects:hover, .player:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
 
-.summrs{
-    color: rgb(0, 0, 0);
-    font-weight: bold    ;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-footer {
-    text-align: center;
-    padding: 30px;
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 16px;
-}
-.highlight-word{
+/* ===== HIGHLIGHT WORDS ===== */
+.highlight-word {
     color: #3b82f6;
     font-weight: bold;
     cursor: pointer;
@@ -224,57 +146,130 @@ footer {
     color: #1d4ed8;
 }
 
-.expand {
-    color: #3b82f6;
-    font-weight: bold;
+/* ===== LANGUAGE SECTION ===== */
+.languages-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.language-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.button-html, .button-css, .button-js, .button-python, .button-java {
     cursor: pointer;
-    font-size: 20px;
-    transition: transform 0.3s ease;
     display: inline-block;
 }
 
-.expand:hover {
-    color: #1d4ed8;
-    transform: scale(1.2);
-}
-
-.activities-list {
-    margin-top: 15px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    border-left: 3px solid #3b82f6;
-}
-.joe-burrow a{
-    color:black
-}
-.activities-list p {
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 0;
+/* ===== MUSIC SECTION ===== */
+.MusicCollumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
     padding: 10px;
+    width: 100%;
 }
 
-
-/* Interest Links Styling */
-.video-games, .writing, .music, .sports, .tv, .comics, .lola,
-.projects,
- .player {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+.MusicRow {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
 }
 
-.video-games:hover, .writing:hover, .music:hover, .sports:hover, .tv:hover, .comics:hover, .lola:hover,
-.projects:hover,
-.player:hover{
-    color: #1d4ed8;
-    text-decoration: underline;
+.MusicItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: fit-content;
 }
 
-/* Back Button Styling */
+.MusicItem:hover {
+    background-color: rgba(75, 77, 80, 0.1);
+    transform: translateY(-1px);
+}
+
+.MusicImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.MusicTxt {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* ===== PROFILE PICTURE & CIRCULAR IMAGES ===== */
+.pfp, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img, .writing-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.pfp:hover, .comics-img:hover, .sports-img:hover, .music-img:hover, .tv-img:hover, .video-games-img:hover, .writing-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(59, 130, 246, 0.6);
+}
+
+.pfp:hover .pfp-img, .comics-img:hover .comics-img, .sports-img:hover .sports-img, .music-img:hover .music-img, 
+.tv-img:hover .tv-img, .video-games-img:hover .video-games-img, .writing-img:hover .writing-img {
+    transform: scale(1.1);
+}
+
+/* ===== SPORTS PLAYER IMAGES ===== */
+.TJWattPic, .BijanRobinsonPic, .JoshAllenPic, .BrianThomasJrPic, .DrakeMayePic, .GeorgePickensPic, .JahmyrGibbsPic, .JaydenDanielsPic, .JoeBurrowPic, .MalikNabersPic {
+    width: 300px;
+    height: auto;
+    max-height: 400px;
+    border: 8px solid black;
+    box-shadow: 0 10px 20px black;
+    border-radius: 15px;
+}
+
+/* ===== BACK BUTTONS ===== */
 .back-button-container {
     text-align: center;
     margin-bottom: 20px;
@@ -309,134 +304,7 @@ footer {
     font-size: 16px;
 }
 
-/* Main category image containers - all set to consistent 200x200px */
-.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-}
-
-/* Image content within the circular containers - consistent styling */
-.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-}
-
-/* Sports player profile images */.TJWattPic,
-.BijanRobinsonPic,.JoshAllenPic,.BrianThomasJrPic,.DrakeMayePic,.GeorgePickensPic,.JahmyrGibbsPic,.JaydenDanielsPic,.JoeBurrowPic,.MalikNabersPic{
-    width: 300px;
-    height: auto;
-    max-height: 400px;
-    border: 8px solid black;
-    box-shadow: 0 10px 20px black;
-    border-radius: 15px;
-}
-
-/* Enhanced GIF image styling */
-.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.comics:hover, .sports:hover, .music:hover, .tv:hover, .video-games:hover, .writing:hover, .pfp:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(59, 130, 246, 0.6);
-}
-
-/* Ensure GIF images maintain aspect ratio and fill containers properly */
-.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
-    transition: transform 0.3s ease;
-}
-
-.comics:hover .comics-img, .sports:hover .sports-img, .music:hover .music-img, 
-.tv:hover .tv-img, .video-games:hover .video-games-img, .writing:hover .writing-img, 
-.pfp:hover .pfp-img {
-    transform: scale(1.1);
-}
-
-/* Additional GIF image optimizations */
-.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-    will-change: transform;
-    backface-visibility: hidden;
-}
-
-/* Smooth image transitions */
-.comics img, .sports img, .music img, .tv img, .video-games img, .writing img, .pfp img {
-    will-change: transform;
-    backface-visibility: hidden;
-}
-
-/* Enhanced border effects for better visual appeal */
-.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-}
-
-.comics:hover, .sports:hover, .music:hover, .tv:hover, .video-games:hover, .writing:hover, .pfp:hover {
-    border: 4px solid rgba(59, 130, 246, 0.8);
-    background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
-}
-
-/* Ensure GIF images load smoothly */
-.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-}
-
-/* Responsive adjustments for different screen sizes */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .header {
-        padding: 20px;
-    }
-    
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-/* Final GIF image consistency improvements */
-.comics, .sports, .music, .tv, .video-games, .writing, .pfp {
-    /* Ensure consistent sizing and positioning */
-    flex-shrink: 0;
-    /* Prevent image distortion */
-    aspect-ratio: 1;
-}
-
-/* Ensure all GIF images have the same base styling */
-.pfp-img, .writing-img, .comics-img, .sports-img, .music-img, .tv-img, .video-games-img {
-    /* Prevent any unwanted borders or outlines */
-    outline: none;
-    /* Ensure smooth scaling */
-    transform-origin: center;
-}
-
-/* Projects page styling */
+/* ===== PROJECTS PAGE ===== */
 .projects-content {
     margin-top: 20px;
 }
@@ -466,7 +334,7 @@ footer {
 }
 
 .project-item p {
-    color: #e5e7eb;
+    color: rgba(0, 0, 0, 0.8) !important;
     margin-bottom: 15px;
     line-height: 1.6;
 }
@@ -490,11 +358,7 @@ footer {
     border-color: rgba(59, 130, 246, 0.8);
 }
 
-.project-link:active {
-    transform: translateY(0);
-}
-
-/* Sacked QBs Section Styling */
+/* ===== SACKED QBS SECTION ===== */
 .sacked-qbs {
     margin-top: 40px;
     width: 100%;
@@ -566,8 +430,99 @@ footer {
     font-weight: 500;
 }
 
-/* Responsive adjustments for QB grid */
+/* ===== MISC ELEMENTS ===== */
+.expand {
+    color: #3b82f6;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.expand:hover {
+    color: #1d4ed8;
+    transform: scale(1.2);
+}
+
+.activities-list {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #3b82f6;
+}
+
+.activities-list p {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    padding: 10px;
+}
+
+.summrs {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.fb-container, .sportsContent {
+    width: 100vw;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.joe-burrow a {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+}
+
+/* ===== FULL SCREEN ENFORCEMENT ===== */
+.about-content, .languages-content, .MusicCollumn, .MusicRow, .MusicItem {
+    width: 100%;
+}
+
+.sacked-qbs {
+    width: calc(100vw - 40px);
+    margin: 40px 20px;
+}
+
+.qb-grid {
+    width: 100%;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .header {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .comics-img, .sports-img, .music-img, .tv-img, .video-games-img, .writing-img, .pfp {
+        width: 150px;
+        height: 150px;
+    }
+    
     .qb-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
@@ -587,114 +542,9 @@ footer {
     }
 }
 
-/* Ensure text visibility without breaking layout */
-.about-content, .about-title, .languages-title, .languages-content {
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: rgba(0, 0, 0, 0.9) !important;
-}
-
-/* Ensure links are visible and properly styled */
-.video-games, .writing, .music, .sports, .tv, .comics, .lola, .projects {
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #3b82f6 !important;
-    text-decoration: none !important;
-    display: inline !important;
-}
-
-/* Fix project link colors for better visibility */
-.project-item p {
-    color: rgba(0, 0, 0, 0.8) !important;
-}
-
-/* Ensure all text elements are properly visible */
-p, h1, h2, h3, h4, h5, h6, span, div {
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-/* Fix any potential display issues with main containers */
-.container, .container2, .container3 {
-    display: flex !important;
-}
-
-/* Ensure the pfp maintains its circular shape and positioning */
-.pfp {
-    display: block !important;
-    flex-shrink: 0 !important;
-}
-
-/* Fix any potential issues with the header layout */
-.header {
-    display: block !important;
-}
-
-/* Ensure the main content area is properly sized */
-main {
-    display: block !important;
-}
-
-/* Fix any potential issues with the about section */
-.about, .languages {
-    display: flex !important;
-}
-
-/* Ensure language items are properly displayed */
-.language-item {
-    display: flex !important;
-}
-
-/* Fix any potential issues with the footer */
-footer {
-    display: block !important;
-}
-
-/* Additional fixes for better layout */
-* {
-    box-sizing: border-box;
-}
-
-/* Ensure proper spacing and alignment */
-.container {
-    gap: 30px !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Fix any potential issues with the pfp image */
-.pfp-img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-/* Ensure proper text rendering */
-body {
-    font-family: "Lucida Console", serif !important;
-    line-height: 1.6 !important;
-    color: #333 !important;
-    background: #ffffff !important;
-}
-
-/* Fix any potential issues with the main content */
-main {
-    width: 1200px !important;
-    height: 800px !important;
-    margin: 0 auto !important;
-    padding: 20px !important;
-    overflow: auto !important;
-}
-
-/* Ensure proper button functionality */
-.button-html, .button-css, .button-js, .button-python, .button-java {
-    cursor: pointer !important;
-    display: inline-block !important;
-}
-
-/* Fix any potential issues with the language icons */
-.language-icon {
-    display: block !important;
-    width: 24px !important;
-    height: 24px !important;
+@media (max-width: 480px) {
+    .comics-img, .sports-img, .music-img, .tv-img, .video-games-img, .writing-img, .pfp {
+        width: 120px;
+        height: 120px;
+    }
 }
